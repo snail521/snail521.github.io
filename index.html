@@ -338,6 +338,134 @@
             
 
   
+    <article id="post-flask前言" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+  
+  
+    <h1 itemprop="name">
+	
+	  <a class="article-title" href="/2021/07/22/flask%E5%89%8D%E8%A8%80/" target="_blank">flask前言</a>
+  
+    </h1>
+  
+
+
+  
+  
+<a href="/2021/07/22/flask%E5%89%8D%E8%A8%80/" class="archive-article-date">
+        <time datetime="2021-07-22T08:02:41.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2021-07-22</time>
+</a>
+
+  
+  
+    
+
+  
+  </header>
+  
+  <div class="article-entry" itemprop="articleBody">
+    
+    <p>[TOC]</p>
+<h1 id="介绍"><a href="#介绍" class="headerlink" title="介绍"></a>介绍</h1><blockquote>
+<p>flask两个主要依赖：  </p>
+<blockquote>
+<p>wsgi（web server gateway interface,web服务器网关接口）-Werkzeug<br>jinja2模板引擎</p>
+</blockquote>
+</blockquote>
+<h1 id="flask程序交互步骤"><a href="#flask程序交互步骤" class="headerlink" title="flask程序交互步骤"></a>flask程序交互步骤</h1><ol>
+<li>用户在浏览器输入URL访问某个资源</li>
+<li>flask接收用户请求并分析请求的URL</li>
+<li>为这个URL找到对应处理函数</li>
+<li>执行函数并生成响应，返回给浏览器</li>
+<li>浏览器接收并解析响应，将信息显示在页面中</li>
+</ol>
+<hr>
+<hr>
+<hr>
+<h1 id="web安全防范"><a href="#web安全防范" class="headerlink" title="web安全防范"></a>web安全防范</h1><h2 id="注入攻击"><a href="#注入攻击" class="headerlink" title="注入攻击"></a>注入攻击</h2><p>注入攻击包括：系统命令注入、SQL注入、NoSQL注入、ORM注入</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">SELECT * FROM students WHERE password=&#x27;&#x27; or 1=1 --;&#x27;</span><br><span class="line">SELECT * FROM students WHERE password=&#x27;&#x27;; drop table students; --;</span><br></pre></td></tr></table></figure>
+<h2 id="XSS"><a href="#XSS" class="headerlink" title="XSS"></a>XSS</h2><pre><code>xss(cross-site scripting, 跨站脚本)  
+原理：  
+    XSS是注入攻击的一种，攻击者通过将代码注入被攻击者的网站中，用户一旦访问网页便会执行被注入的恶意脚本。  
+分类：  
+    反射型XSS攻击  
+        非持久型：通过URL注入攻击脚本，只有当用户访问这个URL时才会执行攻击脚本
+    存储型XSS攻击
+        持久型：将攻击代码存储到数据库中，任何用户访问包含攻击代码的页面都会被殃及
+</code></pre>
+<h2 id="CSRF"><a href="#CSRF" class="headerlink" title="CSRF"></a>CSRF</h2><pre><code>CSRF（cross site request forgery， 跨站请求伪造）
+原理：
+    攻击者利用用户在浏览器中保存的认证信息，向对应的站点发送伪造请求。
+CSRF令牌校验
+    判断请求是否来自自己的网站
+</code></pre>
+<h1 id="未使用的工具"><a href="#未使用的工具" class="headerlink" title="未使用的工具"></a>未使用的工具</h1><p>flask-bootstrap<br>flask-script</p>
+<h1 id="项目结构"><a href="#项目结构" class="headerlink" title="项目结构"></a>项目结构</h1><ol>
+<li>manage.py    用来控制程序  </li>
+<li><strong>init</strong>     初始化文件</li>
+<li>settings     项目配置文件</li>
+<li>ext          项目扩展库</li>
+<li>views        <ul>
+<li>视图函数</li>
+<li>处理业务逻辑</li>
+<li>协调模板和模型之间的关系</li>
+</ul>
+</li>
+<li>models<ul>
+<li>模型</li>
+<li>定义模型结构</li>
+<li>获得数据库表的映射</li>
+</ul>
+</li>
+</ol>
+<p><img src="https://github.com/snail521/pic/blob/main/1.png?raw=true"></p>
+
+    
+
+    
+
+    
+
+  </div>
+  <div class="article-info article-info-index">
+    
+    
+    
+
+    
+    <p class="article-more-link">
+      <a class="article-more-a" href="/2021/07/22/flask%E5%89%8D%E8%A8%80/">展开全文 >></a>
+    </p>
+    
+
+    
+    <div class="clearfix"></div>
+  </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
     <article id="post-firstblog" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     

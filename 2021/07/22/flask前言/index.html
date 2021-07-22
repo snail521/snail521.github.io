@@ -6,19 +6,23 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="https://snail521.github.io">
-  <title>Archives: 2021 | snail养猪日记</title>
+  <title>flask前言 | snail养猪日记</title>
   <meta name="generator" content="hexo-theme-yilia-plus">
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   
-  <meta name="description" content="记录生活、工作">
-<meta property="og:type" content="website">
-<meta property="og:title" content="snail养猪日记">
-<meta property="og:url" content="https://snail521.github.io/archives/2021/index.html">
+  <meta name="description" content="[TOC] 介绍 flask两个主要依赖：    wsgi（web server gateway interface,web服务器网关接口）-Werkzeugjinja2模板引擎   flask程序交互步骤 用户在浏览器输入URL访问某个资源 flask接收用户请求并分析请求的URL 为这个URL找到对应处理函数 执行函数并生成响应，返回给浏览器 浏览器接收并解析响应，将信息显示在页面中">
+<meta property="og:type" content="article">
+<meta property="og:title" content="flask前言">
+<meta property="og:url" content="https://snail521.github.io/2021/07/22/flask%E5%89%8D%E8%A8%80/index.html">
 <meta property="og:site_name" content="snail养猪日记">
-<meta property="og:description" content="记录生活、工作">
+<meta property="og:description" content="[TOC] 介绍 flask两个主要依赖：    wsgi（web server gateway interface,web服务器网关接口）-Werkzeugjinja2模板引擎   flask程序交互步骤 用户在浏览器输入URL访问某个资源 flask接收用户请求并分析请求的URL 为这个URL找到对应处理函数 执行函数并生成响应，返回给浏览器 浏览器接收并解析响应，将信息显示在页面中">
 <meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://github.com/snail521/pic/blob/main/1.png?raw=true">
+<meta property="article:published_time" content="2021-07-22T08:02:41.000Z">
+<meta property="article:modified_time" content="2021-07-22T08:04:31.521Z">
 <meta property="article:author" content="snail">
 <meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://github.com/snail521/pic/blob/main/1.png?raw=true">
   
     <link rel="alternative" href="/atom.xml" title="snail养猪日记" type="application/atom+xml">
   
@@ -331,86 +335,277 @@
               class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            
+            <article id="post-flask前言" class="article article-type-post " itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
   
   
-    
-    
-      
-      
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2021" class="archive-year">2021</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	
+    <h1 class="article-title" itemprop="name">
+      flask前言
+    </h1>
+  
+
+
+  
+  
+        
+        <span id="busuanzi_container_page_pv" style='display:none' class="archive-article-date">
+              <i class="icon-smile icon"></i> 阅读数：<span id="busuanzi_value_page_pv"></span>次
+        </span>
+
 <a href="/2021/07/22/flask%E5%89%8D%E8%A8%80/" class="archive-article-date">
         <time datetime="2021-07-22T08:02:41.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2021-07-22</time>
 </a>
 
+  
+  
+    
+<div style="margin-top:10px;">
+  <span class="post-time">
+    <span class="post-meta-item-icon">
+      <!-- fonts.scss -->
+      <!-- 百度字体平台:http://fontstore.baidu.com/static/editor/index.html -->
+      <i class="icon-statistics"></i>
+      <span class="post-meta-item-text"> 字数统计:</span>
+      <span class="post-count">441字</span>
+    </span>
+  </span>
+
+  <span class="post-time">
+    &nbsp; | &nbsp;
+    <span class="post-meta-item-icon">
+      <i class="icon-book icon"></i>
+      <span class="post-meta-item-text"> 阅读时长≈</span>
+      <span class="post-count">1分</span>
+    </span>
+  </span>
+</div>
+
+
+  
+  </header>
+  
+  <div class="article-entry" itemprop="articleBody">
+    
+    <p>[TOC]</p>
+<h1 id="介绍"><a href="#介绍" class="headerlink" title="介绍"></a>介绍</h1><blockquote>
+<p>flask两个主要依赖：  </p>
+<blockquote>
+<p>wsgi（web server gateway interface,web服务器网关接口）-Werkzeug<br>jinja2模板引擎</p>
+</blockquote>
+</blockquote>
+<h1 id="flask程序交互步骤"><a href="#flask程序交互步骤" class="headerlink" title="flask程序交互步骤"></a>flask程序交互步骤</h1><ol>
+<li>用户在浏览器输入URL访问某个资源</li>
+<li>flask接收用户请求并分析请求的URL</li>
+<li>为这个URL找到对应处理函数</li>
+<li>执行函数并生成响应，返回给浏览器</li>
+<li>浏览器接收并解析响应，将信息显示在页面中</li>
+</ol>
+<hr>
+<hr>
+<hr>
+<h1 id="web安全防范"><a href="#web安全防范" class="headerlink" title="web安全防范"></a>web安全防范</h1><h2 id="注入攻击"><a href="#注入攻击" class="headerlink" title="注入攻击"></a>注入攻击</h2><p>注入攻击包括：系统命令注入、SQL注入、NoSQL注入、ORM注入</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">SELECT * FROM students WHERE password=&#x27;&#x27; or 1=1 --;&#x27;</span><br><span class="line">SELECT * FROM students WHERE password=&#x27;&#x27;; drop table students; --;</span><br></pre></td></tr></table></figure>
+<h2 id="XSS"><a href="#XSS" class="headerlink" title="XSS"></a>XSS</h2><pre><code>xss(cross-site scripting, 跨站脚本)  
+原理：  
+    XSS是注入攻击的一种，攻击者通过将代码注入被攻击者的网站中，用户一旦访问网页便会执行被注入的恶意脚本。  
+分类：  
+    反射型XSS攻击  
+        非持久型：通过URL注入攻击脚本，只有当用户访问这个URL时才会执行攻击脚本
+    存储型XSS攻击
+        持久型：将攻击代码存储到数据库中，任何用户访问包含攻击代码的页面都会被殃及
+</code></pre>
+<h2 id="CSRF"><a href="#CSRF" class="headerlink" title="CSRF"></a>CSRF</h2><pre><code>CSRF（cross site request forgery， 跨站请求伪造）
+原理：
+    攻击者利用用户在浏览器中保存的认证信息，向对应的站点发送伪造请求。
+CSRF令牌校验
+    判断请求是否来自自己的网站
+</code></pre>
+<h1 id="未使用的工具"><a href="#未使用的工具" class="headerlink" title="未使用的工具"></a>未使用的工具</h1><p>flask-bootstrap<br>flask-script</p>
+<h1 id="项目结构"><a href="#项目结构" class="headerlink" title="项目结构"></a>项目结构</h1><ol>
+<li>manage.py    用来控制程序  </li>
+<li><strong>init</strong>     初始化文件</li>
+<li>settings     项目配置文件</li>
+<li>ext          项目扩展库</li>
+<li>views        <ul>
+<li>视图函数</li>
+<li>处理业务逻辑</li>
+<li>协调模板和模型之间的关系</li>
+</ul>
+</li>
+<li>models<ul>
+<li>模型</li>
+<li>定义模型结构</li>
+<li>获得数据库表的映射</li>
+</ul>
+</li>
+</ol>
+<p><img src="https://github.com/snail521/pic/blob/main/1.png?raw=true"></p>
+
+    
+
+    
+    <div class="page-reward">
+      <a href="javascript:void(0);" class="page-reward-btn tooltip-top" target="_self">
+        <div class="tooltip tooltip-east">
+          <span class="tooltip-item">
+            赏
+          </span>
+          <span class="tooltip-content">
+            <span class="tooltip-text">
+              <span class="tooltip-inner">
+                <p class="reward-p"><i class="icon icon-quo-left"></i>谢谢你请我吃糖果<i
+                    class="icon icon-quo-right"></i></p>
+                <div class="reward-box">
+                  
+                  <div class="reward-box-item">
+                    <img class="reward-img" src="/img/zfb.jpg">
+                    <span class="reward-type">支付宝</span>
+                  </div>
+                  
+                  
+                  <div class="reward-box-item">
+                    <img class="reward-img" src="/img/vx%E6%94%B6%E6%AC%BE.jpg">
+                    <span class="reward-type">微信</span>
+                  </div>
+                  
+                </div>
+              </span>
+            </span>
+          </span>
         </div>
-    	 
-  
-    <h1 itemprop="name">
-	
-	  <a class="archive-article-title" href="/2021/07/22/flask%E5%89%8D%E8%A8%80/" target="_blank">flask前言</a>
-  
-    </h1>
-  
+      </a>
+    </div>
+    
 
-
-        <div class="article-info info-on-right">
+    
+    <div class="declare"> 
+      <ul class="post-copyright">
+        <li>
+          <strong>本文作者：</strong>
+          snail
+        </li>
+        <li>
+          <strong>本文链接：</strong>
+          <a href="https://snail521.github.io/2021/07/22/flask前言/" title="flask前言" target="_blank">https://snail521.github.io/2021/07/22/flask前言/</a>
+        </li>
+        
+        <li>
+          <strong>版权声明： </strong>
           
-          
+          本博客所有文章除特别声明外，均采用 <a href="https://github.com/JoeyBling/hexo-theme-yilia-plus/blob/master/LICENSE" rel="external nofollow" target="_blank">MIT</a> 许可协议。转载请注明出处！
+        </li>
+        
+      </ul>
+    </div>
+    
 
+  </div>
+  <div class="article-info article-info-index">
+    
+    
+    
+
+    
+
+    
+    
+<div class="share-btn share-icons tooltip-left">
+  <div class="tooltip tooltip-east">
+    <span class="tooltip-item">
+      <a href="javascript:;" class="share-sns share-outer">
+        <i class="icon icon-share"></i>
+      </a>
+    </span>
+    <span class="tooltip-content">
+      <div class="share-wrap">
+        <div class="share-icons">
+          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
+            <i class="icon icon-weibo"></i>
+          </a>
+          <!-- <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
+            <i class="icon icon-weixin"></i>
+          </a> -->
+          <a class="qq share-sns" href="javascript:;" data-type="qq">
+            <i class="icon icon-qq"></i>
+          </a>
+          <a class="douban share-sns" href="javascript:;" data-type="douban">
+            <i class="icon icon-douban"></i>
+          </a>
+          <a class="qzone share-sns" href="javascript:;" data-type="qzone">
+            <i class="icon icon-qzone"></i>
+          </a>
+          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
+            <i class="icon icon-facebook"></i>
+          </a>
+          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
+            <i class="icon icon-twitter"></i>
+          </a>
+          <a class="google share-sns" href="javascript:;" data-type="google">
+            <i class="icon icon-google"></i>
+          </a>
         </div>
-        <div class="clearfix"></div>
-    </header>
+      </div>
+    </span>
+  </div>
+</div>
+
+<div class="page-modal wx-share js-wx-box">
+    <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <div class="wx-qrcode">
+     <!-- <img src="//pan.baidu.com/share/qrcode?url=https://snail521.github.io/2021/07/22/flask%E5%89%8D%E8%A8%80/" alt="微信分享二维码"> -->
+    </div>
+</div>
+
+<div class="mask js-mask"></div>
+
+    
+    <div class="clearfix"></div>
+  </div>
   </div>
 </article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	
-<a href="/2021/07/21/firstblog/" class="archive-article-date">
-        <time datetime="2021-07-21T09:49:06.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2021-07-21</time>
-</a>
 
+
+<nav id="article-nav">
+  
+  
+    <a href="/2021/07/21/firstblog/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">firstblog</div>
+      <i class="icon-circle-right"></i>
+    </a>
+  
+</nav>
+
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
         </div>
-    	 
-  
-    <h1 itemprop="name">
-	
-	  <a class="archive-article-title" href="/2021/07/21/firstblog/" target="_blank">firstblog</a>
-  
-    </h1>
-  
+        
+        
+    </div>
+</aside>
 
 
-        <div class="article-info info-on-right">
-          
-          
 
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-  
-    </div></section>
-  
 
-    
+
+
+
+
+
+
+
+
 
 
           </div>
@@ -451,8 +646,8 @@
 	var yiliaConfig = {
 		mathjax: false,
 		isHome: false,
-		isPost: false,
-		isArchive: true,
+		isPost: true,
+		isArchive: false,
 		isTag: false,
 		isCategory: false,
 		open_in_new: true,
